@@ -8,11 +8,13 @@ const getAll = () => {
 
 const create = newObject => {
   const request = axios.post(baseUrl, newObject)
+  console.log('axios.request')
   return request.then(response => response.data)
 }
 
 const update = (id, newObject) => {
   const request = axios.put(`${baseUrl}/${id}`, newObject)
+  console.log('axios.update')
   return request.then(response => response.data)
 }
 
